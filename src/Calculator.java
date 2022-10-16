@@ -23,7 +23,12 @@ public class Calculator {
         } else if (choice == 3) {
             System.out.println(subtraction(firstNum, secondNum));
         } else if (choice == 4) {
-            System.out.println(division(firstNum, secondNum));
+            if (firstNum < secondNum) {
+                System.out.println(division(firstNum, secondNum));
+            } else {
+                System.out.println("Division cannot be performed");
+            }
+
         } else {
             System.out.println("Invalid selection.");
         }
@@ -43,5 +48,6 @@ public class Calculator {
 
     public static double division(double x, double y) {
         return x / y;
+
     }
 }
